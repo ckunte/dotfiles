@@ -1,5 +1,5 @@
 alias ls='exa'
-alias rm='rm -I'
+alias rm='rm -i'
 alias cat='bat'
 alias week='date +%V'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
