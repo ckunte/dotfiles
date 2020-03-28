@@ -57,7 +57,7 @@ set scrolloff=3
 set wrap linebreak nolist
 
 " Spelling check
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 
 " Word completion
 set complete+=kspell

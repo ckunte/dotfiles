@@ -102,3 +102,4 @@ if [ -d ~/texmf ] ; then
     export TEXMFHOME=~/texmf
     export TEXINPUTS=::~/texmf
 fi
+export PATH="/usr/local/bin:$PATH"
