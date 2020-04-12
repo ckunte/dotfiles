@@ -19,6 +19,7 @@ brew "python"
 brew "reattach-to-user-namespace"
 brew "rename"
 brew "ripgrep"
+brew "tldr"
 brew "tmux"
 brew "vim"
 
