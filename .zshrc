@@ -103,3 +103,13 @@ if [ -d ~/texmf ] ; then
     export TEXINPUTS=::~/texmf
 fi
 export PATH="/usr/local/bin:$PATH"
+
+# Usage run n command (where, n is the number of times)
+
+run() {
+    number=$1
+    shift
+    for i in `seq $number`; do
+        $@
+    done
+}
