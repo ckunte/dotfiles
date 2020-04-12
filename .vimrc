@@ -63,7 +63,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 set complete+=kspell
 
 " Abbreviations
-abbr <expr> ds strftime('%Y-%m-%d')
+abbr <expr> ds strftime('%Y-%m-%d %H:%M')
 abbr kr Kind regards,<cr>Chetan
 
 call plug#begin()
