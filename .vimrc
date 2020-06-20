@@ -64,6 +64,7 @@ setlocal spell
 set spelllang=en_gb
 " Correct misspelled words on the fly with Ctrl+L
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 
 " Word completion
 set complete+=kspell

@@ -14,7 +14,6 @@ brew "mosh"
 brew "rename"
 brew "ripgrep"
 brew "tldr"
-brew "tmux"
 
 cask "basictex"
 cask "sublime-merge"
