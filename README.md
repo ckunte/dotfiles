@@ -11,7 +11,8 @@ This setup assumes that you have either a new Mac or just re-installed MacOS afr
 3. Install [Homebrew] and run `brew bundle install` from `~/`
 4. Install [additional LaTeX packages][templates]
 5. Install [vim-plug]
-6. Install [housekeeping scripts]
+6. Install [housekeeping scripts][hkp]
+7. Install [oh-my-zsh]
 
 Step 3 requires `Brewfile`, which can either be created afresh or saved from another computer using `brew bundle dump`. (`Brewfile` is included in this repository.)
 
@@ -19,3 +20,4 @@ Step 3 requires `Brewfile`, which can either be created afresh or saved from ano
 [templates]: https://github.com/ckunte/templates
 [vim-plug]: https://github.com/junegunn/vim-plug
 [hkp]: https://github.com/ckunte/hkp
+[oh-my-zsh]: https://github.com/ohmyzsh/ohmyzsh
