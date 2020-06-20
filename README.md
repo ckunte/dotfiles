@@ -1,27 +1,22 @@
 # dotfiles
 
-My dotfiles folder containing `.zshrc` and `.vimrc` files. Not included are folders `.oh-my-zsh` and `.vim/plugged`.
+These are the files that reside in my home folder.
 
-## Setting-up a new MacOS
+## Setting a new Mac up
 
-This setup assumes that either you have a new Mac or you've just reinstalled MacOS afresh.
+This setup assumes that you have either a new Mac or just re-installed MacOS afresh.
 
-1. On old Mac: Backup installation info. 
+1. Copy all the files from this repo to the home folder (`~/`)
+2. Install command line tools: `sudo xcode-select --install`
+3. Install [Homebrew] and run `brew bundle install` from `~/`
 
-        brew bundle dump
+    The above requires `Brewfile`, which can either be created afresh or saved from another computer using `brew bundle dump`. A copy of `Brewfile` is included in this repository.
 
-    The above command saves a file named `Brewfile` in a folder it was run from. Save this file in a repository (or on a USB stick) for use later.
+4. Install additional LaTeX packages from the [templates] repository
+5. Install [vim-plug]
+6. Install housekeeping scripts from [hkp] repository
 
-2. On new Mac: Install command line tools
-
-        sudo xcode-select --install
-
-3. On new Mac: Install homebrew and import `Brewfile`
-
-    Install Homebrew using instructions from [homebrew site][b], and copy `Brewfile` from repository or from USB stick in the home folder (`~`). 
-
-4. On new Mac: Install all items from Brewfile
-
-        brew bundle
-
-[b]: https://brew.sh/ "Homebrew: The missing package manager for macOS (or Linux)"
+[Homebrew]: https://brew.sh "The Missing Package Manager for macOS (or Linux)"
+[templates]: https://github.com/ckunte/templates
+[vim-plug]: https://github.com/junegunn/vim-plug
+[hkp]: https://github.com/ckunte/hkp

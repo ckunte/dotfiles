@@ -66,7 +66,8 @@ set complete+=kspell
 abbr <expr> ds strftime('%Y-%m-%d %H:%M')
 abbr kr Kind regards,<cr>Chetan
 
-call plug#begin()
+call plug#begin('~/.vim/plugged')
+
 " Quoting / Parenthesizing made simple
 Plug 'tpope/vim-surround'
 
