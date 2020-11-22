@@ -18,6 +18,9 @@ set autoindent
 " Make tab stops as wide as 4 spaces
 set tabstop=4 shiftwidth=4 expandtab
 
+" Backspace
+set backspace=indent,eol,start
+
 " Highlight searches
 set hlsearch
 
@@ -57,7 +60,10 @@ set scrolloff=3
 set wrap linebreak nolist
 
 " Spelling check
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
+setlocal spell
+set spelllang=en_gb
+" Correct misspelled words on the fly with Ctrl+L
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Word completion
 set complete+=kspell
@@ -71,6 +77,11 @@ call plug#begin('~/.vim/plugged')
 " Quoting / Parenthesizing made simple
 Plug 'tpope/vim-surround'
 
+" Colour scheme
+Plug 'dylanaraps/wal.vim'
+
 " Auto pairing
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
+
+colorscheme wal
