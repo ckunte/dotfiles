@@ -17,6 +17,5 @@ brew "tldr"
 brew "tmux"
 
 cask "basictex"
-cask "hazel"
 cask "sublime-merge"
 cask "sublime-text"
