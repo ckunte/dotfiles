@@ -1,3 +1,16 @@
+" ckunte's .vimrc file
+
+" Reload .vimrc automatically
+autocmd! bufwritepost .vimrc source %
+
+" Better copy and paste
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+" Indent right with > and left with < 
+vnoremap < <gv
+vnoremap > >gv
+
 "enable syntax highlighting
 syntax on
 
@@ -5,21 +18,16 @@ syntax on
 set ttyfast
 
 " Do not add empty lines at the end of files
-set binary
-set noeol
+set binary noeol
 
 " Respect modeline in files
-set modeline
-set modelines=4
+set modeline modelines=4
 
 " Enable autoindent
 set autoindent
 
 " Make tab stops as wide as 4 spaces
-set tabstop=4 shiftwidth=4 expandtab
-
-" Backspace
-set backspace=indent,eol,start
+set tabstop=4 softtabstop=4 shiftwidth=4 shiftround expandtab
 
 " Highlight searches
 set hlsearch
@@ -78,11 +86,7 @@ call plug#begin('~/.vim/plugged')
 " Quoting / Parenthesizing made simple
 Plug 'tpope/vim-surround'
 
-" Colour scheme
-Plug 'dylanaraps/wal.vim'
-
 " Auto pairing
 Plug 'jiangmiao/auto-pairs'
-call plug#end()
 
-colorscheme wal
+call plug#end()
