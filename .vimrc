@@ -29,6 +29,9 @@ set autoindent
 " Make tab stops as wide as 4 spaces
 set tabstop=4 softtabstop=4 shiftwidth=4 shiftround expandtab
 
+" Get backspace to work
+set backspace=indent,eol,start
+
 " Highlight searches
 set hlsearch
 
@@ -81,6 +84,12 @@ set complete+=kspell
 abbr <expr> ds strftime('%Y-%m-%d %H:%M')
 abbr kr Kind regards,<cr>Chetan
 
+" Disable python2 support in nvim
+let g:loaded_python_provider = 0
+
+" Python3 path for neovim to use
+let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.9/bin/python3'
+
 call plug#begin('~/.vim/plugged')
 
 " Quoting / Parenthesizing made simple
@@ -89,4 +98,25 @@ Plug 'tpope/vim-surround'
 " Auto pairing
 Plug 'jiangmiao/auto-pairs'
 
+" UltiSnips for snippets
+Plug 'sirver/ultisnips'
+
+" LaTeX snippets for Vim using UltiSnips (downloads only tagged releases)
+Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
+
+" Lightline
+Plug 'itchyny/lightline.vim'
+
+"  colour scheme
+Plug 'patstockwell/vim-monokai-tasty'
+
 call plug#end()
+
+" UltiSnips triggers
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
+" Color schemes
+colorscheme vim-monokai-tasty
+let g:lightline = {'colorscheme': 'monokai_tasty',}
