@@ -1,0 +1,51 @@
+# Usage: run <n> xelatex somefile.tex, where <n> is the number of times to run
+run () {
+    number=$1
+    shift
+    for i in `seq $number`; do
+        $@
+    done
+}
+# zipf: Create a ZIP archive of a folder 
+zipf () { zip -r "$1".zip "$1" ; }
+
+# extract: Extract most known archives (Nate Landau, https://gist.github.com/10654137) 
+extract () {
+    if [ -f $1 ] ; then
+      case $(echo "$1" | tr "[A-Z]" "[a-z]") in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via extract()" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
+
+# qfind: Quickly search for file (Nate Landau, https://gist.github.com/10654137)
+alias qfind="find . -name "
+# ff: Find file under the current folder
+ff () { /usr/bin/find . -name "$@" ; }
+# ffs: Find file whose name starts with a given string
+ffs () { /usr/bin/find . -name "$@"'*' ; }
+# ffe: Find file whose name ends with a given string
+ffe () { /usr/bin/find . -name '*'"$@" ; }
+
+# ii: Display useful host related info (Nate Landau, https://gist.github.com/10654137)
+ii () {
+    echo -e "\nYou are logged on $HOST"
+    echo -e "\nAdditional information: " ; uname -a
+    echo -e "\nUsers logged on: " ; w -h
+    echo -e "\nCurrent date : " ; date
+    echo -e "\nMachine stats : " ; uptime
+    echo
+}
