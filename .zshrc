@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ckunte/dotfiles/.oh-my-zsh"
+export ZSH="$HOME/dotfiles/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,7 +105,7 @@ INFOPATH=/usr/local/texlive/2020basic/texmf-dist/doc/info:$INFOPATH; export INFO
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/dotfiles/.{path,aliases,functions,extra}; do
+for file in ~/dotfiles/.{aliases,bash_func}; do
     [ -r "$file"  ] && [ -f "$file"  ] && source "$file";
 done;
 unset file;
