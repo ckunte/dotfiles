@@ -92,17 +92,17 @@ let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.9/bin
 
 call plug#begin('~/.vim/plugged')
 
-" Quoting / Parenthesizing made simple
-Plug 'tpope/vim-surround'
+" UltiSnips for snippets
+Plug 'sirver/ultisnips'
 
 " Auto pairing
 Plug 'jiangmiao/auto-pairs'
 
-" UltiSnips for snippets
-Plug 'sirver/ultisnips'
+" Quoting / Parenthesizing made simple
+Plug 'tpope/vim-surround'
 
-" LaTeX snippets for Vim using UltiSnips (downloads only tagged releases)
-Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
+" Snippets
+Plug 'ckunte/vimsnips'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
