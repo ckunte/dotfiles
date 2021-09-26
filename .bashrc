@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# To play nice with mosh, set language
+LANG="en_US.UTF-8"
+export LANG
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
