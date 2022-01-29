@@ -1,0 +1,14 @@
+[user]
+	name = Chetan Kunte
+	email = <email address here>
+    signingkey = <gpg key details here>
+[commit]
+    gpgsign = true
+[alias]
+    st = status -sb
+	ll = log --oneline
+    ga = add -A
+	cm = commit -m
+	p = push
+	last = log -1 HEAD --stat
+	gl = config --global -l
