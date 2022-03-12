@@ -88,7 +88,7 @@ abbr kr Kind regards,<cr>Chetan
 let g:loaded_python_provider = 0
 
 " Python3 path for neovim to use
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.9/bin/python3'
+"let g:python3_host_prog = '/user/bin/python3'
 
 call plug#begin('~/.vim/plugged')
 
