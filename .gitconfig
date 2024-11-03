@@ -1,0 +1,21 @@
+[user]
+	name = Chetan Kunte
+	email = ckunte@gmail.com
+	signingkey = /home/ckunte/.ssh/id_ed25519.pub
+[commit]
+	gpgsign = true
+
+[tag]
+    gpgsign = true
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+
+[init]
+    defaultBranch = master
+
+[core]
+    editor = nvim
