@@ -14,6 +14,14 @@ if status is-interactive
     alias sl='dm-tool lock'
     alias fl='rg --files | fzf'
     alias cat='cat | fold -s -w 80'
+    # Get latest release of a software from GitHub
+    function glr \
+        --argument-names user_repo
+        curl \
+            --silent \
+            "https://api.github.com/repos/$user_repo/releases/latest" \
+        | string match --regex '"tag_name": "\K.*?(?=")'
+    end
     #function subl
     #    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $argv
     #end
