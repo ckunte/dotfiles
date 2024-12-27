@@ -1,6 +1,7 @@
 if status is-interactive
     fzf --fish | source
-    # abbreviations
+    abbr rsync rsync -auvz --delete --exclude $HOME/excl.txt
+    # aliases
     alias vim nvim
     alias cp='cp -i'
     alias df='df -h'
@@ -22,7 +23,6 @@ if status is-interactive
             "https://api.github.com/repos/$user_repo/releases/latest" \
         | string match --regex '"tag_name": "\K.*?(?=")'
     end
-    #function subl
-    #    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $argv
-    #end
 end
+# uv
+fish_add_path "/home/ckunte/.local/bin"
