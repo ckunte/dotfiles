@@ -93,10 +93,10 @@ set complete+=kspell
 
 " Abbreviations
 abbr <expr> ds strftime('%Y-%m-%d %H:%M')
-abbr addr C Kunte, my-address-here
-abbr eml ckunte@gmail.com
 abbr kr Kind regards,<cr>Chetan
-abbr ph my-phone-here
+
+" Disable python2 support in nvim
+"let g:loaded_python_provider = 0
 
 " Python3 path for neovim to use
 let g:python3_host_prog = '/usr/bin/python3'
@@ -123,11 +123,18 @@ Plug 'kaarmu/typst.vim'
 Plug 'SirVer/ultisnips'
 Plug 'ckunte/typst-snippets-vim'
 
+" Jinja
+Plug 'lepture/vim-jinja'
+
+" Blog
+Plug 'ckunte/markdown-snippets-vim'
+
 call plug#end()
 
 " Color schemes
 colorscheme vim-monokai-tasty
 let g:lightline = {'colorscheme': 'monokai_tasty',}
+
 " Ultisnips instructions
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
