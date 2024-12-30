@@ -1,6 +1,11 @@
 if status is-interactive
     fzf --fish | source
+    # rsync with my most used flags
     abbr rsync rsync -auvz --delete --exclude $HOME/excl.txt
+    # Screenshot focused draw area
+    abbr ssa grim -g \"\$\(slurp\)\"
+    # Download audio (append a path or URL at the end)
+    abbr ya yt-dlp -f \"bestaudio[ext=m4a]\"  
     # aliases
     alias vim nvim
     alias cp='cp -i'
