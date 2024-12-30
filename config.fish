@@ -15,7 +15,8 @@ if status is-interactive
     alias sl='dm-tool lock'
     alias fl='rg --files | fzf'
     alias cat='cat | fold -s -w 80'
-    # Get latest release of a software from GitHub
+    # Get the latest release version of a GitHub repo.,
+    # e.g. glr "ckunte/tce"
     function glr \
         --argument-names user_repo
         curl \
