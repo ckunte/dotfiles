@@ -7,6 +7,7 @@ if status is-interactive
     # Download audio (append a path or URL at the end)
     abbr ya yt-dlp -f \"bestaudio[ext=m4a]\"  
     # aliases
+    alias open pcmanfm
     alias vim nvim
     alias cp='cp -i'
     alias df='df -h'
